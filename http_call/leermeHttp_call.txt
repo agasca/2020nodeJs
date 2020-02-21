@@ -1,0 +1,40 @@
+en requestse instalara la dependencia
+npm i request --save
+//https://www.npmjs.com/package/request
+
+ejecutamos
+node geocode.js
+el resultado lo cpoiamos en un index.html
+lo abrimos con chrome
+
+entramos a 
+maps.googleapis.com/maps/api/geocode/json
+obnetemos una respuesta vacia
+le agegamos
+?address=Machu pichu
+
+maps.googleapis.com/maps/api/geocode/json?address=Machu pichu
+//nota: https://cloud.google.com/maps-platform/user-guide/account-changes/
+https://console.cloud.google.com/google/maps-apis/start?pli=1
+
+
+jsonviewer.stack.hu
+
+//habilitar cuenta
+http://g.co/dev/maps-no-account
+https://cloud.google.com/maps-platform/user-guide/account-changes/?authuser=1
+https://cloud.google.com/maps-platform/
+
+cuenta google: 
+web Professor
+w389r0f3550r@gmail.com
+primeros pasos
+Hago llamadas a APIs sin una clave
+Utilizo APIs de forma gratuita o sin una clave. ¿Podré seguir haciéndolo?
+https://console.cloud.google.com/google/maps-apis/start?authuser=1
+proyecto: mapaApiGoogle
+crear cuenta de facturacion
+https://cloud.google.com/maps-platform/user-guide/account-changes/#no-plan
+
+https://console.cloud.google.com/freetrial/signup/tos?project=protean-vigil-154118&redirectPath=%2Fgoogle%2Fmaps-apis%2Fstart%3Fauthuser%3D0%26_ga%3D2.56973032.373878766.1581890193-1563906381.1580328616%26_gac%3D1.153268042.1580328621.CjwKCAiA98TxBRBtEiwAVRLqu9cNXGMQ98beG8tOkvcHJEjvClDGuynoIEFbIUWJdI2Kg4O4g7wfshoCXG0QAvD_BwE%26project%3Dprotean-vigil-154118%26step%3Dproduct_selection&authuser=0
+https://console.cloud.google.com/projectselector2/google/maps-apis/overview?authuser=1&supportedpurview=project

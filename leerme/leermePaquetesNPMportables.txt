@@ -1,0 +1,26 @@
+//gestor de paquetes nodejs
+npm -v
+npm install -g npm
+ 
+//lodash
+npm install lodash
+//crear dos:
+node_modules
+{}package-lock.json
+
+//para hacerlo portable (valores por defecto del aplicativo)
+borrar: node_modules y {}package-lock.json
+en terminal 
+npm init (dejar por defecto)
+resulatdo : package.json
+
+instalaremos lodash
+npm i lodash --save
+resultado:package-lock.json
+
+borrar carpeta node_modules
+ahora instalamos a parttir del package-lock.json y package.json
+npm install
+
+para desinstalar
+npm uninstall lodash --save

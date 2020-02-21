@@ -1,0 +1,18 @@
+en el folder C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos
+
+instalar express : npm i express --save
+se valida en el archivo package.json
+
+se trabajara en la carpeta web
+
+
+
+https://expressjs.com/es/
+https://expressjs.com/es/starter/hello-world.html
+
+node .\appExpress.js
+nodemon .\appExpress.js
+
+ejecutar postman desde extensiones launch appExpress
+
+localhost:3000

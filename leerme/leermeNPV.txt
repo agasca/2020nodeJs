@@ -1,0 +1,14 @@
+leermeNPV.txt
+npm -v
+pwd:C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos
+npm i -g <modulo> <--save>
+npm i lodash                    //folder node_modules
+                                //package-lock.json
+                                //se pueden borrar
+//se recomienda
+npm init                        //clic por defecto
+                                //package.json
+npm i lodash --save             //actualiza package.json "dependencies":´ç
+                                //mantener los dos archivos: package.json, package-lock.json
+npm install                     //leer package.json, busca las dependencias y las instala nuevamente
+npm uninstal <modulo> --save

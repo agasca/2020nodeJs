@@ -1,0 +1,28 @@
+node inspect appDebug.js
+dentro de folder debug
+npm install inspect --save
+
+//error no funciona
+nodemon inspect appDebug.js
+
+//install
+//npm install -g node-inspector --save
+//start
+//node-debug app.js
+//npm uninstall -g node-inspector --save
+
+la palabra debugger es un breakpoint al utilizar el debug
+
+
+npm install -g nodemon --save
+//iniciar
+nodemon appDebug.js
+
+//en navegador chrome utilizaremos chrome dev tools
+chrome://inspect/#devices
+//en terminal
+node --inspect-brk appDebug.js
+//regresar al navegador y verificar que este el icono de node con el aplicativo
+//Open dedicated DevTools for Node
+//ejecutar y se detendra donde en el codigo hayamos escrito debugger
+nodemon --inspect-brk appDebug.js

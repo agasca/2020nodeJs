@@ -1,0 +1,3 @@
+pwd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos
+npm i lodash --save
+npm i yargs --save
