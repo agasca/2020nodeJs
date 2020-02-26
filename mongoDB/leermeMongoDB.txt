@@ -1,0 +1,66 @@
+
+paths de instalacion
+C:\Program Files\MongoDB\Server\4.2\
+C:\Program Files\MongoDB\Server\4.2\data\
+C:\Program Files\MongoDB\Server\4.2\log\
+
+
+services mongoDB server
+
+//
+ir a la carpeta bin de MongoDB
+C:\Program Files\MongoDB\Server\4.2\bin
+indicar la ruta de los datos
+mongod.exe --dbpath C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\mongoDB\mongo-data
+puerto 27017
+
+//
+abrimos otra terminal
+vamos a la carpeta bin
+C:\Program Files\MongoDB\Server\4.2\bin
+ejecutar mongo.exe 
+//(creamos dos inserts)
+iniciado el mongoDB
+db.Personas.insert({id:1, nombre:"alberto", mensaje:"bienvenidos"})
+db.Personas.insert({id:2, nombre:"Luis", mensaje:"Welcome"})
+comprobamos
+db.Personas.find()
+
+//
+instalanmos robo3 t 
+C:\Program Files\Robo 3T 1.3.1
+en nuevo asistente de tobo3 t
+crear una conexion
+name: localhost
+conectamos y veremos Personas bajo Test
+
+
+
+//
+//ejemplo mongoose - mongoDB
+crear un folder
+C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crud
+cd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crud
+
+npm install express-generator -g
+express --view=hbs node-crud
+ change directory:
+     > cd node-crud
+        C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crud\node-crud
+   install dependencies:
+     > npm install
+        npm audit fix
+   run the app:
+     > SET DEBUG=node-crud:* & npm start
+    detener despues de comprobar
+
+configuramos las nuevas carpetas desde github node-crud-master.zip
+
+//mongoose
+//instalamos mongoose
+npm install mongoose --save
+
+npm start
+comprobar chrome localhost:3000
+
+

@@ -1,0 +1,20 @@
+instalar (forma global)
+    C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\web\express-generator>
+    npm i express generator -g
+
+    generar el proyecto
+    pug
+    express --view=pug pug-generator
+    hbs
+    express --view=hbs hbs-generator
+    cd pug-generator
+    node app.js 
+    error: faltan los modulos
+    instalar las dependencias que tiene el package.json
+    npm install
+    ejecutamos
+    set DEBUG=pug-generator:* & npm start
+    en caso de error
+    set DEBUG=pug-generator:* <enter>
+    npm start <enter>
+    
