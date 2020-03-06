@@ -6,7 +6,6 @@ let personaSchema = new Schema({
     nombres: { type: String },
     apellidos: { type: String },
     token: { type: String }
-    //edad: { type: Number, min: 0 }
 }, { versionKey: false });
 
 let Persona = mongoose.model('Personas', personaSchema);

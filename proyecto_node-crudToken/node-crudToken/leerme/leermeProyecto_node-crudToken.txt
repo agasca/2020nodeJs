@@ -1,0 +1,133 @@
+PreConfiguracion heroku y mongoDB.mlab.atlas
+//
+antes de dar incio comprobar la operacion actual de la ultima version del proyecto 
+cd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crud\node-crud (base)
+cd C:/Users/lenovo/Documents/bajados/nodeJs/node/nodejs-tutos
+cd C:/Users/lenovo/Documents/bajados/nodeJs/node/nodejs-tutos/proyecto_node-crudToken
+cd C:/Users/lenovo/Documents/bajados/nodeJs/node/nodejs-tutos/proyecto_node-crudToken/node-crudToken
+cd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crudToken\node-crudToken (base)
+
+
+MongoDB:
+levantar el servicio: services mongoDB server
+
+
+cmd
+ir a la carpeta bin de MongoDB (db version v4.2.3)
+cd C:\Program Files\MongoDB\Server\4.2\bin
+indicar la ruta de los datos
+mongod.exe --dbpath C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\mongoDB\mongo-data
+la pen-ultima linea debe mostrar: puerto 27017
+
+
+cmd
+abrimos otra terminal
+vamos a la carpeta bin
+cd C:\Program Files\MongoDB\Server\4.2\bin
+ejecutar mongo.exe 
+comprobamos
+db.Personas.find()
+salimos: exit
+
+
+comprobamos robo 3 t (app)
+conectamos y comborbamos mismos datos de la coleccion
+
+
+instalar dependiencias de los archivos package-lock.json, package.json
+cd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crud
+npm install
+
+
+run the app:
+SET DEBUG=node-crud:* 
+npm start
+chrome: http://localhost:3000/
+
+
+mongoDB, orm-> mongoose
+
+
+//
+se establecera un git init y git commit para rama maestra
+git status
+git log --oneline --all --graph --decorate
+
+preparar credenciales de heroku:w389r0f3550r
+preparar credenciales de mongoDB Atlas (antes MLab):w389r0f3550r
+
+heroku.com (sitio)
+heroku CLI (terminal)
+cmd
+cd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crudToken\node-crudToken
+heroku login
+dara aviso Logged in as w389r0f3550r...
+
+preparar el codigo
+  conexion.js
+  Crear Base de Datos en la Nube con MongoDB Atlas
+  Cluster Name: dbCluster
+  security: 
+    add User: dbcrudag
+    pass: i0qMxmUNupL94aHl
+  ipAddress WL: 0.0.0.0/0
+  connectar Cluster
+    Connection String Only: mongodb+srv://dbcrudag:<password>@dbcluster-wpa9k.mongodb.net/test?retryWrites=true&w=majority
+    Connection String Only: mongodb+srv://dbcrudag:i0qMxmUNupL94aHl@dbcluster-wpa9k.mongodb.net/test?retryWrites=true&w=majority
+  nombre de base de datos unico: dbclustercrudag
+  collections:personas
+
+
+*
+https://dashboard.heroku.com/apps
+en el dashboard no aparece ninguna app
+se creara desde
+cd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crudToken\node-crudToken
+*
+(git init) opcional
+gita add .
+git commit -am "mlab"
+heroku apps:create dbcrud-ag
+repositorio creado: https://dbcrud-ag.herokuapp.com/ | https://git.heroku.com/dbcrud-ag.git | To https://git.heroku.com/dbcrud-ag.git
+git push heroku master
+heroku open
+o
+https://dbcrud-ag.herokuapp.com/
+https://dbcrud-ag.herokuapp.com/
+
+
+repositorio:
+https://git.heroku.com/dbcrud-ag.git
+
+checar errores
+heroku logs --tail
+
+
+checar los datos debajos en mongodb atlas
+usuario atlas: dbcrudag
+pass atlas: rXgXoMSYQ8ZW0BdP
+
+conexion.js
+mongodb+srv://dbcrudag:<password>@dbcluster-wpa9k.mongodb.net/test?retryWrites=true&w=majority
+mongodb+srv://dbcrudag:<password>@dbcluster-wpa9k.mongodb.net/test?retryWrites=true&w=majority
+
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://dbcrudag:<password>@dbcluster-wpa9k.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+
+
+
+//
+//Respaldos
+20200229proyecto_node-crudToken
+operando en heroku  OK sin nuevo algoritmo texto
+
+20200226proyecto_node-crudToken
+operando en localhost OK

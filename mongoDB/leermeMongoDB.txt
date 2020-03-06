@@ -39,7 +39,6 @@ conectamos y veremos Personas bajo Test
 //
 //ejemplo mongoose - mongoDB
 crear un folder
-C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crud
 cd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crud
 
 npm install express-generator -g

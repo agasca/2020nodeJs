@@ -1,6 +1,0 @@
-leermeProyecto_node-crudToken.txt
-
-git status
-git log --oneline --all --graph --decorate
-C:/Users/lenovo/Documents/bajados/nodeJs/node/nodejs-tutos
-cd C:/Users/lenovo/Documents/bajados/nodeJs/node/nodejs-tutos/proyecto_node-crudToken

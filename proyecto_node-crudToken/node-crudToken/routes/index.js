@@ -8,7 +8,7 @@ const c = console.log
 /* GET home page. */
 router.get('/', (req, res, next) => {
   Persona.find((err, personas) => {
-    c(personas) //console.log(personas);
+    //c(personas) //console.log(personas);
     if (err) throw err;
     res.render('index', { personas: personas });
   });
@@ -21,7 +21,7 @@ router.get('/persona/nuevo', (req, res, next) => {
 router.get('/persona/modificar/:id', (req, res, next) => {
   let idPersona = req.params.id;  
   Persona.findOne({_id: idPersona }, (err, persona) => {
-    c(persona) //console.log(persona);
+    //c(persona) //console.log(persona);
     if (err) throw err;
     res.render('personaForm', { persona: persona });
   });

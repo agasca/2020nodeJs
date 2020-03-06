@@ -4,19 +4,16 @@ let router = express.Router();
 let mongoose = require('./../config/conexion');
 let Persona = require('./../models/persona');
 
-const c = console.log
-
 router.post('/persona/operar', (req, res, next) => {
-  //c(req.body);  
+  //console.log(req.body);  
 
   if (req.body._id === "") {
-    //llamar a la rutina para crear:
     let per = new Persona({
       nombres: req.body.nombres,
       apellidos: req.body.apellidos,
       token: token(nomApe(req.body.nombres), nomApe(req.body.apellidos))
-      //edad: req.body.token
-    });    
+    });
+    
     per.save();
   } else {    
     //console.log(req.body._id);
@@ -26,7 +23,6 @@ router.post('/persona/operar', (req, res, next) => {
   }
   res.redirect('/');
 });
-
 
 let nomApe = (cadena) => {
   this.data = cadena
