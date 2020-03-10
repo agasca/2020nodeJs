@@ -37,4 +37,14 @@ router.get('/persona/eliminar/:id', (req, res, next) => {
   });
 });
 
+  
+router.get('/persona/listado', (req, res, next) => {
+  Persona.find((err, personas) => {
+    //c(personas) //console.log(personas);
+    if (err) throw err;
+    res.render('listado', { personas: personas });
+  });
+});
+
+
 module.exports = router;

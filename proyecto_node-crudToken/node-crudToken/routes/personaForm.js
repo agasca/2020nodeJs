@@ -3,23 +3,41 @@ let router = express.Router();
 
 let mongoose = require('./../config/conexion');
 let Persona = require('./../models/persona');
-
+const c = console.log
 router.post('/persona/operar', (req, res, next) => {
-  //console.log(req.body);  
-
-  if (req.body._id === "") {
-    let per = new Persona({
-      nombres: req.body.nombres,
-      apellidos: req.body.apellidos,
-      token: token(nomApe(req.body.nombres), nomApe(req.body.apellidos))
-    });
-    
-    per.save();
-  } else {    
-    //console.log(req.body._id);
-    Persona.findByIdAndUpdate(req.body._id, { $set: req.body }, { new: true }, (err, model) => {
-      if (err) throw err;
-    });
+  //c(req.body);  
+  var compara = 0
+  var regex = /^[A-Za-záéíóúÁÉÍÓÚñÑ]+(?: [a-zA-ZáéíóúÁÉÍÓÚñÑ]+){0,1}$/
+  var texto = req.body.nombres.trim().replace(/\s\s+/g, '')
+  var longitudCadena = texto.length > 2  
+  ? true
+  : false
+  texto = req.body.nombres.trim().replace(/\s\s+/g, ' ')
+  //c(">>>"+texto+"<<<<")
+  
+  //c(longitudCadena)
+  var prueba = regex.test(texto) == true  
+  ? true
+  : false
+  //c("--->"+prueba+"<--->"+req.body._id)
+  //c(prueba)
+  if(longitudCadena == true && prueba == true){
+    //c("es correcto")
+    if (req.body._id === "") {
+      let per = new Persona({
+        nombres: req.body.nombres,
+        apellidos: req.body.apellidos,
+        token: token(nomApe(req.body.nombres), nomApe(req.body.apellidos))
+      });
+      
+      per.save();
+    } else {    
+      //console.log(req.body._id);
+      Persona.findByIdAndUpdate(req.body._id, { $set: req.body }, { new: true }, (err, model) => {
+        c(err)
+        if (err) throw err;
+      });
+    }
   }
   res.redirect('/');
 });

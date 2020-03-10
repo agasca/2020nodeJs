@@ -1,0 +1,21 @@
+<div class="container">      
+    <div class="row">
+    <br>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Token</th>
+        </tr>
+        </thead>
+        {{#each personas}}
+          <tr>
+            <td>{{this.nombres}}</td> 
+            <td>{{this.apellidos}}</td> 
+            <td>{{this.token}}</td>
+          </tr>          
+       {{/each}}   
+      </table>
+    </div>
+</div>

@@ -17,7 +17,7 @@ ir a la carpeta bin de MongoDB (db version v4.2.3)
 cd C:\Program Files\MongoDB\Server\4.2\bin
 indicar la ruta de los datos
 mongod.exe --dbpath C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\mongoDB\mongo-data
-la pen-ultima linea debe mostrar: puerto 27017
+la penúltima linea debe mostrar: puerto 27017
 
 
 cmd
@@ -36,16 +36,26 @@ conectamos y comborbamos mismos datos de la coleccion
 
 instalar dependiencias de los archivos package-lock.json, package.json
 cd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crud
+cd C:/Users/lenovo/Documents/bajados/nodeJs/node/nodejs-tutos/proyecto_node-crud
+cd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crudToken
 npm install
 
+//opcion 1
+cd .\node-crud\
+//opcion 1
+cd .\node-crudToken\
 
 run the app:
 SET DEBUG=node-crud:* 
+SET DEBUG=node-crudToken:* 
 npm start
 chrome: http://localhost:3000/
 
 
-mongoDB, orm-> mongoose
+
+en linea
+
+mongoDB, "orm"-> mongoose
 
 
 //
@@ -85,7 +95,7 @@ se creara desde
 cd C:\Users\lenovo\Documents\bajados\nodeJs\node\nodejs-tutos\proyecto_node-crudToken\node-crudToken
 *
 (git init) opcional
-gita add .
+git add .
 git commit -am "mlab"
 heroku apps:create dbcrud-ag
 repositorio creado: https://dbcrud-ag.herokuapp.com/ | https://git.heroku.com/dbcrud-ag.git | To https://git.heroku.com/dbcrud-ag.git
